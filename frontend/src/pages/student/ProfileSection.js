@@ -112,9 +112,7 @@ const ProfileSection = ({ studentData }) => {
         src={getImageUrl(profileData.profilePicture)}
         alt="Profile"
         className="profile-section-photo"
-        onError={(e) => {
-          e.target.src = "/api/placeholder/128/128"; // Fallback image
-        }}
+        
       />
       {/* Rest of your component remains the same */}  
       {!isEditing ? (

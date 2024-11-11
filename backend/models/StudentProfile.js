@@ -34,13 +34,8 @@ const studentProfileSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    default: '',
-    validate: {
-      validator: function (v) {
-        return /^\d{10,15}$/.test(v); // Example validation for phone numbers
-      },
-      message: props => `${props.value} is not a valid phone number!`
-    }
+    default: ''
+   
   },
   bio: {
     type: String,
@@ -74,13 +69,8 @@ const studentProfileSchema = new mongoose.Schema({
   },
   meetingTime: {
     type: String,
-    default: '',
-    validate: {
-      validator: function (v) {
-        return /^([01]\d|2[0-3]):([0-5]\d)$/.test(v); // HH:mm format validation
-      },
-      message: props => `${props.value} is not a valid time format!`
-    }
+    default: ''
+    
   }
 }, { timestamps: true });
 
